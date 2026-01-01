@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nzota Hotel — Welcome</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <nav class="site-nav" role="navigation" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="#">Nzota</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#directions">Directions</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn small" href="#book">Book</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero / Opening Section -->
+  <header class="hero" id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content reveal">
+      <h1 class="hotel-name">Nzota Hotel</h1>
+      <p class="tagline">Comfort • Elegance • Exceptional Service</p>
+      <div class="hero-cta">
+        <a href="#book" class="btn primary">Book a Room</a>
+        <a href="#gallery" class="btn ghost">Explore Gallery</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- About / Intro -->
+    <section class="intro">
+      <div class="container">
+        <h2 class="reveal">Welcome to Nzota Hotel</h2>
+        <p>Enjoy a relaxing stay at our beautifully appointed rooms and take in stunning views. Our friendly staff are ready to make your stay unforgettable.</p>
+      </div>
+    </section>
+
+    <!-- Carousel / Gallery -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2 class="reveal">Hotel Gallery</h2>
+        <div class="carousel" aria-roledescription="carousel" aria-label="Hotel photos">
+          <button class="carousel-btn prev" aria-label="Previous slide">❮</button>
+
+          <div class="sr-only carousel-live" aria-live="polite" aria-atomic="true"></div>
+
+          <div class="carousel-track">
+            <!-- Slides (local assets) -->
+            <div class="carousel-slide" data-index="0">
+              <img src="assets/room1.jpg" alt="Hotel exterior at dusk" loading="lazy" decoding="async" class="carousel-img">
+            </div>
+            <div class="carousel-slide" data-index="1">
+              <img src="assets/room2.jpg" alt="Luxurious hotel room" loading="lazy" decoding="async" class="carousel-img">
+            </div>
+            <div class="carousel-slide" data-index="2">
+              <img src="assets/room3.jpg" alt="Hotel pool area" loading="lazy" decoding="async" class="carousel-img">
+            </div>
+          </div>
+
+          <button class="carousel-btn next" aria-label="Next slide">❯</button>
+
+          <div class="carousel-indicators" role="tablist"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="reveal">About Nzota Hotel</h2>
+        <p>At Nzota Hotel we combine warm hospitality with modern comforts to make every stay special. Located in the heart of the city, we offer relaxing rooms, attentive service, and memorable dining experiences.</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="reveal">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="icon" aria-hidden="true">💆‍♀️</div>
+            <h3>Spa & Wellness</h3>
+            <p>Relax with tailored spa treatments and wellness programs.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="icon" aria-hidden="true">🍽️</div>
+            <h3>Dining</h3>
+            <p>Enjoy locally-sourced cuisine and crafted cocktails in our restaurant.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="icon" aria-hidden="true">🎉</div>
+            <h3>Events & Meetings</h3>
+            <p>Flexible meeting spaces and event planning support for every occasion.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="icon" aria-hidden="true">📶</div>
+            <h3>Free Wi‑Fi</h3>
+            <p>High-speed internet across the property to keep you connected.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Directions -->
+    <section id="directions" class="directions">
+      <div class="container">
+        <h2 class="reveal">Find Us</h2>
+        <p><strong>Address:</strong> 123 Main Street, Hometown, Country</p>
+        <p><strong>By car:</strong> 20 minutes from the airport. On-site parking available.</p>
+        <div class="map-wrap">
+          <iframe title="Hotel location map" src="https://www.google.com/maps?q=Nzota+Hotel+Location&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="reveal">Contact & Reservations</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@nzotahotel.example">info@nzotahotel.example</a></p>
+            <p><strong>Address:</strong> 123 Main Street, Hometown</p>
+          </div>
+          <div class="contact-form-wrap">
+            <form id="contact-form" novalidate>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <button class="btn primary" type="submit">Send Message</button>
+              <div id="form-success" class="sr-only" role="status" aria-live="polite">Message sent. Thank you.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking (placeholder) -->
+    <section id="book" class="book">
+      <div class="container">
+        <h2>Make a Reservation</h2>
+        <p>Simple booking placeholder — link to your reservation system here.</p>
+        <a class="btn primary" href="#">Reserve Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Nzota Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Blue & white theme */
+:root{
+  --bg: #ffffff;
+  --primary: #1e90ff; /* Dodger blue */
+  --primary-dark: #166bb3;
+  --muted: #6b7280;
+  --max-width: 1100px;
+  --radius: 10px;
+  --gap: 1.25rem;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+body{background:var(--bg);color:#0f172a;line-height:1.5;padding-top:64px}
+.container{max-width:var(--max-width);margin:0 auto;padding:3rem 1rem}
+
+/* Site Navigation */
+.skip-link{position:fixed;left:12px;top:12px;background:rgba(0,0,0,0.8);color:#fff;padding:.35rem .6rem;border-radius:8px;z-index:999;transform:translateY(-120%);transition:transform .18s ease,opacity .18s ease;opacity:0}
+.skip-link:focus{transform:translateY(0);opacity:1}
+.site-nav{position:fixed;left:0;right:0;top:0;z-index:80;pointer-events:auto;transition:background 220ms ease,box-shadow 220ms ease}
+.site-nav .nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;color:#fff;text-decoration:none;font-size:1.05rem}
+.nav-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.12);padding:.45rem;border-radius:8px;color:#fff}
+.nav-toggle:focus{outline:3px solid rgba(30,144,255,0.18)}
+.nav-toggle .hamburger{display:inline-block;width:18px;height:2px;background:#fff;position:relative}
+.nav-toggle .hamburger::before, .nav-toggle .hamburger::after{content:'';position:absolute;left:0;right:0;height:2px;background:#fff}
+.nav-toggle .hamburger::before{top:-6px}.nav-toggle .hamburger::after{top:6px}
+.nav-menu{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+.nav-menu a{color:#fff;text-decoration:none;padding:.35rem .5rem;border-radius:6px}
+.nav-menu a.active{background:rgba(255,255,255,0.08);color:#fff}
+.btn.small{padding:.4rem .6rem;font-size:.9rem}
+@media (max-width:900px){
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+  .nav-menu{position:absolute;top:calc(100% + 8px);right:12px;background:rgba(255,255,255,0.98);color:#0b1220;padding:1rem;border-radius:8px;flex-direction:column;min-width:200px;box-shadow:0 10px 30px rgba(13,61,123,0.08);display:none}
+  .nav-menu.open{display:flex}
+  .nav-menu a{color:#0b1220}
+  .nav-brand{color:#fff}
+}
+.site-nav.scrolled{background:rgba(255,255,255,0.95);box-shadow:0 6px 20px rgba(13,61,123,0.08)}
+.site-nav.scrolled .nav-menu a{color:#0b1220}
+.site-nav.scrolled .nav-toggle{border-color:rgba(13,61,123,0.08);color:#0b1220}
+.site-nav.scrolled .nav-brand{color:var(--primary)}
+.nav-menu a:focus{outline:3px solid rgba(30,144,255,0.18);box-shadow:0 0 0 4px rgba(30,144,255,0.06)}
+
+/* Hero */
+.hero{min-height:70vh;display:flex;align-items:center;justify-content:center;position:relative;background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('../assets/hero.jpg');background-size:cover;background-position:center;color:#fff}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(13,61,123,0.4), rgba(0,0,0,0.2));}
+.hero-content{position:relative;text-align:center;padding:3rem;border-radius:var(--radius);max-width:900px}
+.hotel-name{font-size:2.25rem;margin:0 0 .5rem;color:#fff}
+.tagline{font-size:1.125rem;margin:0 0 1rem;color:#e6eefc}
+.hero-cta .btn{margin:.25rem}
+
+/* Buttons */
+.btn{display:inline-block;padding:.65rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;border:0;cursor:pointer}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-dark)}
+.btn.ghost{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.12)}
+
+/* Intro */
+.intro{padding:3rem 0;text-align:center}
+.intro h2{margin-top:0}
+
+/* About & Services */
+.about{padding:3rem 0;background:#fff}
+.services{padding:3rem 0}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1rem}
+.service-card{background:linear-gradient(180deg,#fff,#f6fbff);padding:1rem;border-radius:8px;border:1px solid #eef6ff;text-align:center}
+.service-card .icon{font-size:1.75rem;margin-bottom:.5rem}
+@media (max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.services-grid{grid-template-columns:1fr}}
+
+/* Directions & Contact */
+.directions{padding:2rem 0;background:#fbfdff}
+.map-wrap{margin-top:1rem;border-radius:8px;overflow:hidden;border:1px solid #eef6ff}
+.map-wrap iframe{width:100%;height:320px;border:0}
+.contact{padding:3rem 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+.contact-info p{margin:.3rem 0}
+.contact-form-wrap form{display:flex;flex-direction:column;gap:.5rem}
+.contact-form-wrap input,.contact-form-wrap textarea{padding:.6rem;border-radius:6px;border:1px solid #dbeafe}
+@media (max-width:800px){.contact-grid{grid-template-columns:1fr}}
+
+/* Carousel */
+.gallery{padding:3rem 0}
+.carousel{position:relative;margin-top:1rem;overflow:hidden;border-radius:var(--radius);background:#f8fbff;border:1px solid #e9f1ff}
+.carousel-track{display:flex;transition:transform 0.5s ease;will-change:transform}
+.carousel-slide{min-width:100%;flex:0 0 100%;display:flex;align-items:center;justify-content:center}
+.carousel-slide img{width:100%;height:420px;object-fit:cover;display:block}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);border:none;color:#fff;padding:.5rem .8rem;border-radius:6px;cursor:pointer}
+.carousel-btn.prev{left:12px}
+.carousel-btn.next{right:12px}
+.carousel-btn:focus{outline:3px solid rgba(30,144,255,0.4);box-shadow:0 0 0 4px rgba(30,144,255,0.12)}
+.carousel-indicators{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;display:flex;gap:.5rem}
+.carousel-indicators button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,0.6);cursor:pointer}
+.carousel-indicators button:focus{outline:3px solid rgba(30,144,255,0.24);box-shadow:0 0 0 4px rgba(30,144,255,0.06)}
+.carousel-indicators button[aria-current="true"]{background:var(--primary)}
+
+/* Booking */
+.book{padding:3rem 0;text-align:center;background:#fbfdff;border-top:1px solid #eef6ff}
+
+/* Footer */
+.site-footer{padding:1.5rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+
+/* Responsive */
+@media (max-width:800px){
+  .hotel-name{font-size:1.6rem}
+  .carousel-slide img{height:260px}
+}
+
+/* Accessibility helpers */
+.sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+
+/* Reveal animations & visual polish */
+:root{--reveal-duration:600ms;--reveal-ease:cubic-bezier(.2,.9,.2,1)}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity var(--reveal-duration) var(--reveal-ease),transform var(--reveal-duration) var(--reveal-ease)}
+.reveal-active{opacity:1;transform:none}
+
+/* Hover lift for service cards */
+.service-card{transition:transform 300ms var(--reveal-ease),box-shadow 300ms var(--reveal-ease)}
+.service-card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 12px 30px rgba(13,61,123,0.12)}
+
+/* Button micro-interactions */
+.btn{transition:background 200ms ease,color 200ms ease,transform 150ms ease}
+.btn:active{transform:translateY(1px) scale(.995)}
+
+/* Carousel image subtle zoom */
+.carousel-slide img{transition:transform 450ms ease,filter 250ms ease}
+.carousel-slide img:hover{transform:scale(1.025);filter:brightness(1.02)}
+
+/* Mobile spacing improvements */
+@media (max-width:600px){
+  .container{padding:2rem .75rem}
+  .hero{min-height:60vh}
+  .hotel-name{font-size:1.5rem}
+  .tagline{font-size:1rem;padding:0 .5rem}
+  .service-card{padding:1rem}
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce){
+  .reveal, .service-card, .btn, .carousel-slide img{transition:none !important}
+}
